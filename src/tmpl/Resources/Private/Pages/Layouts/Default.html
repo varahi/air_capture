@@ -1,6 +1,22 @@
-<f:render partial="Header" arguments="{_all}" />
-<f:render partial="Navigation" arguments="{_all}" />
+<header>
+    <div class="header">
+        <f:cObject typoscriptObjectPath="lib.logo" />
+        <f:cObject typoscriptObjectPath="lib.navigation" />
+        <div class="contact">
+            <f:render partial="Contact" arguments="{_all}" />
+            <f:render partial="Footer" arguments="{_all}" />
+        </div>
+    </div>
+</header>
 
-<f:render section="content" />
+<div id="band" class="burger">
+    <img id="bandOne" class="band" alt="band" src="img/band.svg">
+    <img id="bandTwo" class="band" alt="band" src="img/band.svg">
+    <img id="bandThree" class="band" alt="band" src="img/band.svg">
+</div>
 
-<f:render partial="Footer" arguments="{_all}" />
+<section class="contact_content">
+    <div class="contact_block">
+        <f:render section="content" />
+    </div>
+</section>

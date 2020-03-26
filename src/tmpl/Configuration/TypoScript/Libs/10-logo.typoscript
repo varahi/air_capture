@@ -1,0 +1,18 @@
+lib.logo >
+lib.logo = COA
+lib.logo {
+    10 = IMAGE
+    10 {
+        file = EXT:tmpl/Resources/Public/img/logo.svg
+        altText = {$config.header.logoTitle}
+        titleText = {$config.header.logoTitle}
+        file.width = 366
+        file.height = 127
+        params = class="logo"
+        stdWrap.typolink {
+            wrap = <div class="logo_block">|</div>
+            parameter =  {$config.navigation.rootPid}
+            ATagBeforeWrap = 1
+        }
+    }
+}
