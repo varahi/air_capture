@@ -1,0 +1,25 @@
+# manually inserted CSS files
+
+page {
+    includeCSS {
+        10_main = EXT:tmpl/Resources/Public/Css/main.css
+        20_fonts_biorhyme = https://fonts.googleapis.com/css?family=BioRhyme|Lato|Source+Sans+Pro&display=swap
+        30_fonts_lato = https://fonts.googleapis.com/css?family=Lato&display=swap
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJSFooterlibs {
+        10_jquery = EXT:tmpl/Resources/Public/Javascript/index.js
+    }
+}
+
+
+page {
+    headerData {
+        //998 = TEXT
+        //998.value =
+    }
+}

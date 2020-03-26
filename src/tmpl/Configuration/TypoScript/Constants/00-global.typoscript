@@ -1,0 +1,41 @@
+#
+# Defining some general constants
+#
+
+# basic config options
+config {
+    language = fr
+    locale = fr_FR.UTF-8
+    sys_language_uid = 0
+    locale_all = fr_FR
+
+    header {
+        logoTitle =
+        slogan =
+        phone =
+        email =
+    }
+    footer {
+        form {
+            title =
+            source =
+        }
+        // Copyright and footer address source
+        copyright =
+    }
+    navigation {
+        rootPid = 1
+    }
+    page {
+        siteTitle =
+        copyright =
+        address =
+    }
+
+    meta {
+        description =
+        og_description =
+        twitter_description =
+        keywords =
+    }
+}
