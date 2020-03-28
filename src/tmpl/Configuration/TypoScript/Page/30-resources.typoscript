@@ -5,6 +5,7 @@ page {
         10_main = EXT:tmpl/Resources/Public/Css/main.css
         20_fonts_biorhyme = https://fonts.googleapis.com/css?family=BioRhyme|Lato|Source+Sans+Pro&display=swap
         30_fonts_lato = https://fonts.googleapis.com/css?family=Lato&display=swap
+        100_custom = EXT:tmpl/Resources/Public/Css/custom.css
     }
 
     includeJSLibs {

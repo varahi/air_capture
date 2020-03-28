@@ -4,31 +4,67 @@ lib.navigation {
     special.value = 1
     stdWrap.wrap = <ul class="container">|</ul>
     1 = TMENU
-    1.NO {
-        ATagTitle.field = title
-        doNotLinkIt = 1
-        stdWrap.cObject = FILES
-        stdWrap.cObject {
-            references {
-                table = pages
-                fieldName = media
-            }
+    1 {
+        NO {
+            ATagTitle.field = title
+            doNotLinkIt = 1
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    table = pages
+                    fieldName = media
+                    listNum = 0
+                }
 
 
-            renderObj = IMAGE
-            renderObj {
-                file {
-                    import.data = file:current:publicUrl
+                renderObj = IMAGE
+                renderObj {
+                    file {
+                        import.data = file:current:publicUrl
+                        import.listNum = 0
+                    }
+                    altText.field = title
+                    //titleText.field = title
+                    imageLinkWrap = 1
+                    imageLinkWrap {
+                        enable = 1
+                        typolink.parameter.field = uid
+                    }
                 }
-                altText.field = title
-                //titleText.field = title
-                imageLinkWrap = 1
-                imageLinkWrap {
-                    enable = 1
-                    typolink.parameter.field = uid
-                }
+                stdWrap.wrap = <li class="item">|</li>||<li class="item">|</li>||<li class="item">|</li>||<li class="item avatar">|</li>|*|<li class="item">|</li>
             }
-            stdWrap.wrap = <li class="item">|</li>||<li class="item">|</li>||<li class="item">|</li>||<li class="item avatar">|</li>|*|<li class="item">|</li>
+        }
+        ACT = 1
+        ACT {
+            ATagTitle.field = title
+            doNotLinkIt = 1
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    table = pages
+                    fieldName = media
+                    listNum = 1
+                }
+
+
+                renderObj = IMAGE
+                renderObj {
+                    file {
+                        import.data = file:current:publicUrl
+                        import.listNum = 1
+                    }
+                    altText.field = title
+                    //titleText.field = title
+                    imageLinkWrap = 1
+                    imageLinkWrap {
+                        enable = 1
+                        typolink.parameter.field = uid
+                    }
+                }
+                //stdWrap.wrap = <li class="item">|</li>||<li class="item">|</li>||<li class="item">|</li>||<li class="item avatar">|</li>|*|<li class="item">|</li>
+                stdWrap.wrap = <li class="item active">|</li>||<li class="item active">|</li>||<li class="item active">|</li>||<li class="item avatar active">|</li>|*|<li class="item active">|</li>
+            }
         }
     }
+
 }
