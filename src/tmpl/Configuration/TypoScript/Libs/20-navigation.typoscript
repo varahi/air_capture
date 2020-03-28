@@ -11,17 +11,17 @@ lib.navigation {
             stdWrap.cObject = FILES
             stdWrap.cObject {
                 references {
+                    listNum = 0
                     table = pages
                     fieldName = media
-                    listNum = 0
                 }
-
-
                 renderObj = IMAGE
                 renderObj {
                     file {
                         import.data = file:current:publicUrl
-                        import.listNum = 0
+                        treatIdAsReference = 1
+                        titleText.data = file:current:title // field:nav_title // field:title
+                        altText.data = file:current:alternative // field:nav_title // field:title
                     }
                     altText.field = title
                     //titleText.field = title
@@ -31,6 +31,10 @@ lib.navigation {
                         typolink.parameter.field = uid
                     }
                 }
+                # start with first image
+                begin = 0
+                # show only one image
+                maxItems = 1
                 stdWrap.wrap = <li class="item">|</li>||<li class="item">|</li>||<li class="item">|</li>||<li class="item avatar">|</li>|*|<li class="item">|</li>
             }
         }
@@ -41,17 +45,17 @@ lib.navigation {
             stdWrap.cObject = FILES
             stdWrap.cObject {
                 references {
+                    listNum = 0
                     table = pages
                     fieldName = media
-                    listNum = 1
                 }
-
-
                 renderObj = IMAGE
                 renderObj {
                     file {
                         import.data = file:current:publicUrl
-                        import.listNum = 1
+                        treatIdAsReference = 1
+                        titleText.data = file:current:title // field:nav_title // field:title
+                        altText.data = file:current:alternative // field:nav_title // field:title
                     }
                     altText.field = title
                     //titleText.field = title
@@ -61,10 +65,18 @@ lib.navigation {
                         typolink.parameter.field = uid
                     }
                 }
-                //stdWrap.wrap = <li class="item">|</li>||<li class="item">|</li>||<li class="item">|</li>||<li class="item avatar">|</li>|*|<li class="item">|</li>
-                stdWrap.wrap = <li class="item active">|</li>||<li class="item active">|</li>||<li class="item active">|</li>||<li class="item avatar active">|</li>|*|<li class="item active">|</li>
+                # start with second image
+                begin = 1
+                # show only one image
+                maxItems = 1
+                stdWrap.wrap = <li class="item">|</li>||<li class="item">|</li>||<li class="item">|</li>||<li class="item avatar">|</li>|*|<li class="item">|</li>
             }
         }
+
     }
 
 }
+
+
+
+//stdWrap.wrap = <li class="item active">|</li>||<li class="item active">|</li>||<li class="item active">|</li>||<li class="item avatar active">|</li>|*|<li class="item active">|</li>
